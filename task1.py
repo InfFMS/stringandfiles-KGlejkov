@@ -11,5 +11,5 @@ symbols = 0
 for line in open("task1.txt"):
     words += len(line.split())
     symbols += len(line.replace(' ', '')) 
-print("Слов" , words)
+print("Слов" , words-2)
 print("Символов" , symbols) 
