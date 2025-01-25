@@ -25,6 +25,6 @@ fail.close()
 otv=str(mas)
 Mas=otv[1:-1:].replace(", ","\n")
 
-vspomogashka=open("task3-1.txt","x",encoding="utf-8")
+vspomogashka=open("task3new1.txt","x",encoding="utf-8")
 i=vspomogashka.write(Mas)
 vspomogashka.close()
