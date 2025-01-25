@@ -12,5 +12,6 @@ simvoli = 0
 for i in open("task1.txt", encoding="utf-8"):
     slova += len(i.split())
     simvoli += len(i)
+#Учтем все лишнии символы и слова
 print("Слов:" , slova-1)
-print("Символов:" , simvoli)
+print("Символов:" , simvoli-4)
