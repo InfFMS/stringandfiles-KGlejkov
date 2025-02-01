@@ -4,14 +4,17 @@
 # Общее количество слов во всем тексте файла.
 # Общее количество символов (включая пробелы).
 # Выведите полученную статистику на экран.
-import re
-line = sum(1 for line in open("task1.txt"))
-print("Строк:" , line)
-slova = 0
-simvoli = 0
-for i in open("task1.txt", encoding="utf-8"):
-    slova += len(i.split())
-    simvoli += len(i)
-#Учтем все лишнии символы и слова
-print("Слов:" , slova-1)
-print("Символов:" , simvoli-4)
+with open("task1.txt", 'r', encoding="utf-8") as f:
+    fail = f.read()
+strok = fail.splitlines()
+strok_otv = len(strok)
+
+with open("task1new.txt", "w", encoding="utf-8") as filevspomogashka:
+    filevspomogashka.write(fail.replace("—", " "))
+with open("task1new.txt", "r", encoding="utf-8") as filevspomogashka:
+    slov = filevspomogashka.read()
+slovotv = len(slov.split())
+simvolov = len(fail)
+print("Строк:" , strok_otv)
+print("Слов:" , slovotv)
+print("Символов:" , simvolov)
