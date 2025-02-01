@@ -3,3 +3,12 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+paje=int(input("Сколько предложений? "))
+text=""
+fail=open("task4new.txt", "x", encoding="utf-8")
+for i in range(paje):
+    mark = str(input())
+    fail.write(mark.replace(" ", "_").upper() + "\n")
+fail=open("task4new.txt", encoding="utf-8")
+print(fail.read())
+fail.close()
